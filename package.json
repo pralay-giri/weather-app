@@ -1,0 +1,17 @@
+{
+  "name": "1_weather-app",
+  "version": "1.0.0",
+  "description": "weather app using express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js -e js,css,hbs"
+  },
+  "author": "pralay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.22"
+  }
+}
