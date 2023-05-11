@@ -17,7 +17,7 @@ app.set("views", viewsPath);
 app.use(express.static(staticFilePath));
 hbs.registerPartials(partialsPath);
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     res.render("index");
 })
 
@@ -28,9 +28,6 @@ app.get("/showWeather", async (req, res) => {
     await axios.get(url)
         .then(response => {
             weatherData = response.data;
-        })
-        .catch(err=>{
-            console.log(err);
         })
     res.render("index", {
         temperature: weatherData.main.temp,
@@ -47,7 +44,7 @@ app.get("/showWeather", async (req, res) => {
         speed: weatherData.wind.speed,
         degree: weatherData.wind.deg,
     });
-})
+});
 
 app.listen(port, () => {
     console.log(`server live on http://localhost:${port}`);
