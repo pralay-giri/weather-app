@@ -14,8 +14,9 @@ app.set("views", viewsPath);
 app.use(express.static(staticFilePath));
 hbs.registerPartials(partialsPath);
 
+
 app.get("/", (req, res)=>{
-    // let weatherData = getWeatherData();
+    let weatherData = getWeatherData();
     res.render("index", {
         temperature : 20,
         localtion : "howrah",

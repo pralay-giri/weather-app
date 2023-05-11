@@ -1,41 +1,87 @@
 <div class="other_data">
-    <form action="" method="post">
-        <div class="input-city">
-            <input type="text" name="city" required>
-            <label>enter city</label>
-        </div>
-        <input type="submit" value="search">
-    </form>
+  <form action="" method="post">
+    <div class="input-city">
+      <input type="text" name="city" required>
+      <label>enter city</label>
+    </div>
+    <input type="submit" value="search">
+    <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+  </form>
+  <div class="other-options main">
+    <h3 class="heading">Main</h3>
+    <div class="min_temp">
+      <p>Min temp</p>
+      <p>{{min_temp}}</p>
+    </div>
+    <div class="max_temp">
+      <p>Max temp</p>
+      <p>{{max_temp}}</p>
+    </div>
+    <div class="pressure">
+      <p>Pressure</p>
+      <p>{{pressure}}</p>
+    </div>
+    <div class="humidity">
+      <p>Humidity</p>
+      <p>{{humidity}}</p>
+    </div>
+    <div class="visibility">
+      <p>Visibility</p>
+      <p>{{visibility}}</p>
+    </div>
+  </div>
+  <div class="other-options coord">
+    <h3 class="heading">Coord</h3>
+    <div class="longitude">
+      <p>Longitude</p>
+      <p>{{longitude}}</p>
+      <div class="latitude">
+        <p>Latitude</p>
+        <p>{{Latitude}}</p>
+      </div>
+    </div>
+    <div class="other-options wind">
+      <h3 class="heading">Wind</h3>
+      <div class="speed">
+        <p>Speed</p>
+        <p>{{speed}}</p>
+      </div>
+      <div class="speed">
+        <p>Speed</p>
+        <p>{{speed}}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-{{!-- 
+{{!--
 {
-  coord: { lon: 77.2167, lat: 28.6667 },
-  weather: [ { id: 721, main: 'Haze', description: 'haze', icon: '50n' } ],
-  base: 'stations',
-  main: {
-    temp: 30.05,
-    feels_like: 28.31,
-    temp_min: 30.05,
-    temp_max: 30.05,
-    pressure: 1006,
-    humidity: 21
-  },
-  visibility: 3500,
-  wind: { speed: 1.03, deg: 260 },
-  clouds: { all: 0 },
-  dt: 1683736580,
-  sys: {
-    type: 1,
-    id: 9165,
-    country: 'IN',
-    sunrise: 1683677033,
-    sunset: 1683725477
-  },
-  timezone: 19800,
-  id: 1273294,
-  name: 'Delhi',
-  cod: 200
+coord: { lon: 77.2167, lat: 28.6667 },
+weather: [ { id: 721, main: 'Haze', description: 'haze', icon: '50n' } ],
+base: 'stations',
+main: {
+temp: 30.05,
+feels_like: 28.31,
+temp_min: 30.05,
+temp_max: 30.05,
+pressure: 1006,
+humidity: 21
+},
+visibility: 3500,
+wind: { speed: 1.03, deg: 260 },
+clouds: { all: 0 },
+dt: 1683736580,
+sys: {
+type: 1,
+id: 9165,
+country: 'IN',
+sunrise: 1683677033,
+sunset: 1683725477
+},
+timezone: 19800,
+id: 1273294,
+name: 'Delhi',
+cod: 200
 }
- --}}
+--}}
