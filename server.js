@@ -21,7 +21,7 @@ app.get('/', (req, res)=>{
     res.render("index");
 })
 
-app.get("/set", async (req, res) => {
+app.get("/showWeather", async (req, res) => {
     let city = req.query.city;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1359572c6a08638bfea6f61739d9e241&units=metric`;
     let weatherData;
