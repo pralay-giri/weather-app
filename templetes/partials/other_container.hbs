@@ -5,83 +5,53 @@
       <label>enter city</label>
     </div>
     <input type="submit" value="search">
-    <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
   </form>
+  <hr>
   <div class="other-options main">
     <h3 class="heading">Main</h3>
-    <div class="min_temp">
+    <div class="data">
       <p>Min temp</p>
-      <p>{{min_temp}}</p>
+      <p>{{min_temp}}&deg;</p>
     </div>
-    <div class="max_temp">
+    <div class="data">
       <p>Max temp</p>
-      <p>{{max_temp}}</p>
+      <p>{{max_temp}}&deg;</p>
     </div>
-    <div class="pressure">
+    <div class="data">
       <p>Pressure</p>
       <p>{{pressure}}</p>
     </div>
-    <div class="humidity">
+    <div class="data">
       <p>Humidity</p>
       <p>{{humidity}}</p>
     </div>
-    <div class="visibility">
+    <div class="data">
       <p>Visibility</p>
       <p>{{visibility}}</p>
     </div>
   </div>
+  <hr>
   <div class="other-options coord">
     <h3 class="heading">Coord</h3>
-    <div class="longitude">
+    <div class="data">
       <p>Longitude</p>
       <p>{{longitude}}</p>
-      <div class="latitude">
-        <p>Latitude</p>
-        <p>{{latitude}}</p>
-      </div>
     </div>
-    <div class="other-options wind">
-      <h3 class="heading">Wind</h3>
-      <div class="speed">
-        <p>Speed</p>
-        <p>{{speed}}</p>
-      </div>
-      <div class="deg">
-        <p>Degree</p>
-        <p>{{degree}}</p>
-      </div>
+    <div class="data">
+      <p>Latitude</p>
+      <p>{{latitude}}</p>
+    </div>
+  </div>
+  <hr>
+  <div class="other-options wind">
+    <h3 class="heading">Wind</h3>
+    <div class="data">
+      <p>Speed</p>
+      <p>{{speed}}</p>
+    </div>
+    <div class="data">
+      <p>Degree</p>
+      <p>{{degree}}</p>
     </div>
   </div>
 </div>
-
-
-{{!--
-{
-coord: { lon: 77.2167, lat: 28.6667 },
-weather: [ { id: 721, main: 'Haze', description: 'haze', icon: '50n' } ],
-base: 'stations',
-main: {
-temp: 30.05,
-feels_like: 28.31,
-temp_min: 30.05,
-temp_max: 30.05,
-pressure: 1006,
-humidity: 21
-},
-visibility: 3500,
-wind: { speed: 1.03, deg: 260 },
-clouds: { all: 0 },
-dt: 1683736580,
-sys: {
-type: 1,
-id: 9165,
-country: 'IN',
-sunrise: 1683677033,
-sunset: 1683725477
-},
-timezone: 19800,
-id: 1273294,
-name: 'Delhi',
-cod: 200
-}
---}}

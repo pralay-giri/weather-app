@@ -6,7 +6,7 @@ const axios = require("axios");
 const getLiveDate = require("./getDate");
 const { error } = require("console");
 const app = express();
-const port = 5500;
+const port = process.env.PORT || 5500;
 
 const staticFilePath = path.join(__dirname, "/public");
 const viewsPath = path.join(__dirname, "/templetes/views");
@@ -32,6 +32,7 @@ app.get("/showWeather", async (req, res) => {
     res.render("index", {
         temperature: weatherData.main.temp,
         localtion: weatherData.name,
+        country: weatherData.sys.country,
         realtime: getLiveDate(),
         cloud_status: weatherData.weather[0].main,
         min_temp: weatherData.main.temp_min,
