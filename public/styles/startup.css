@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Tilt Neon', cursive;
+    font-family: 'Unbounded', cursive;
+}
+
+:root {
+    --background-color: rgb(44, 158, 223);
+    --gradian-color: rgb(163, 244, 248);
+    --selection-color: rgb(255, 0, 170);
+    --black-overlay: rgb(0 0 0 / 87%);
+}
+
+html,
+body {
+    height: 100vh
+}
+
+body {
+    background-color: var(--gradian-color);
+    background-image: linear-gradient(transparent, var(--background-color));
+}
+
+::selection {
+    background-color: var(--selection-color);
+    color: white;
+}
+
+.main_container {
+    width: 30vw;
+    height: 50vh;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    background-color: var(--gradian-color);
+    background-image: linear-gradient(var(--background-color), transparent);
+    box-shadow: 0 5px 40px black;
+}
+
+.main_container h1 {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.main_container form {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_container form .input-city input {
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border: 1px solid white;
+    color: white;
+}
+
+.main_container form .input-city label {
+    position: relative;
+    top: -36px;
+    pointer-events: none;
+    color: white;
+    padding: 0 3px;
+    margin: 2px;
+}
+
+.main_container form .input-city input:valid~label,
+.main_container form .input-city input:focus~label {
+    top: -60px;
+    background-color: #62c5eb;
+    font-size: 12px;
+    opacity: .9;
+    transition: .5s;
+}
+
+.main_container form input[type="submit"] {
+    background-color: rgba(255,255,255,.5);
+    border: 1px solid white;
+    border-left: none;
+    color: black;
+    padding: 0 2px;
+    width: 50%;
+    cursor: pointer;
+}
+
+.main_container form input[type="submit"]:hover,
+.main_container form input[type="submit"]:focus{
+    background-color: rgba(255,255,255,.7);
+    outline: none;
+}

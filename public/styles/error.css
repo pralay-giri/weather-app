@@ -43,7 +43,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: animate 1000ms linear;
+    animation: animate 1500ms cubic-bezier(1, 0.04, 1, 0.58);
     box-shadow: 0 5px 40px black;
 }
 

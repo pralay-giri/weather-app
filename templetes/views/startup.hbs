@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather forcast</title>
+    <title>Weather forcast start up</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Nunito&family=Pacifico&family=Tilt+Neon&family=Unbounded&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="styles/startup.css">
     <link rel="shortcut icon" href="media/weather favicon.gif" type="image/png">
-
 </head>
 
 <body>
     <div class="main_container">
-        {{>display_container}}
-        {{>other_container}}
+        <h1 class="logo">pralay</h1>    
+        <form action="/showWeather" method="get">
+            <div class="input-city">
+                <input type="text" name="city" required>
+                <label>enter city</label>
+            </div>
+            <input type="submit" value="set">
+        </form>
     </div>
     <script src="https://kit.fontawesome.com/c485021909.js" crossorigin="anonymous" defer></script>
 </body>

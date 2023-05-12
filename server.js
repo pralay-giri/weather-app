@@ -3,8 +3,8 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const axios = require("axios");
-const getLiveDate = require("./getDate");
-const { error } = require("console");
+const getLiveDate = require("./modules/getDate");
+const getweatherData = require("./modules/getWeatherInformation");
 const app = express();
 const port = process.env.PORT || 5500;
 
@@ -18,17 +18,12 @@ app.use(express.static(staticFilePath));
 hbs.registerPartials(partialsPath);
 
 app.get('/', (req, res) => {
-    res.render("index");
+    res.render("startup");
 })
 
 app.get("/showWeather", async (req, res) => {
     let city = req.query.city;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1359572c6a08638bfea6f61739d9e241&units=metric`;
-    let weatherData;
-    await axios.get(url)
-        .then(response => {
-            weatherData = response.data;
-        })
+    let weatherData = await getweatherData(city);
     res.render("index", {
         temperature: weatherData.main.temp,
         localtion: weatherData.name,
