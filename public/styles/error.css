@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Tilt Neon', cursive;
+    font-family: 'Unbounded', cursive;
+}
+
+:root {
+    --background-color: rgb(44, 158, 223);
+    --gradian-color: rgb(163, 244, 248);
+    --selection-color: rgb(255, 0, 170);
+    --black-overlay: rgb(0 0 0 / 87%);
+}
+
+html,
+body {
+    height: 100vh
+}
+
+body {
+    background-color: var(--gradian-color);
+    background-image: linear-gradient(transparent, var(--background-color));
+}
+
+::selection {
+    background-color: var(--selection-color);
+    color: white;
+}
+
+.error-container {
+    width: 65vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: animate 1000ms linear;
+    box-shadow: 0 5px 40px black;
+}
+
+@keyframes animate {
+    0% {
+        box-shadow: 0 0px 0px black;
+    }
+
+    100% {
+        box-shadow: 0 5px 40px black;
+    }
+}
+
+.error-container img {
+    width: 50vh;
+    margin: 10px;
+}
+
+.error-container p {
+    font-size: 16px;
+    letter-spacing: 2px;
+}

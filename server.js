@@ -47,6 +47,10 @@ app.get("/showWeather", async (req, res) => {
     });
 });
 
+app.get("*", (req, res)=>{
+    res.render("error");
+})
+
 app.listen(port, () => {
     console.log(`server live on http://localhost:${port}`);
 });
