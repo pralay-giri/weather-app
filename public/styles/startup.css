@@ -91,7 +91,7 @@ body {
 }
 
 .main_container form input[type="submit"] {
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, .5);
     border: 1px solid white;
     border-left: none;
     color: black;
@@ -101,7 +101,82 @@ body {
 }
 
 .main_container form input[type="submit"]:hover,
-.main_container form input[type="submit"]:focus{
-    background-color: rgba(255,255,255,.7);
+.main_container form input[type="submit"]:focus {
+    background-color: rgba(255, 255, 255, .7);
     outline: none;
+}
+
+@media (width <=769px) {
+    .main_container {
+        width: 40vw;
+        height: 40vh;
+        padding: 8px;
+    }
+
+    .main_container h1 {
+        font-size: 12px;
+    }
+
+    .main_container form .input-city label {
+        font-size: 13px;
+        top: -34px;
+    }
+
+    .main_container form .input-city input:valid~label,
+    .main_container form .input-city input:focus~label {
+        font-size: 10px;
+    }
+}
+
+@media (width <=481px) {
+    .main_container {
+        width: 50vw;
+        height: 30vh;
+        padding: 6px;
+    }
+
+    .main_container h1 {
+        font-size: 11px;
+    }
+
+    .main_container form .input-city label {
+        font-size: 10px;
+        top: -34px;
+    }
+
+    .main_container form .input-city input:valid~label,
+    .main_container form .input-city input:focus~label {
+        font-size: 9px;
+    }
+}
+
+@media (width <=320px) {
+    .main_container {
+        width: 60vw;
+        height: 30vh;
+        padding: 6px;
+    }
+
+
+    .main_container form {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main_container form input[type="submit"] {
+        height: 30px;
+        width: 100%;
+    }
+
+    .main_container form .input-city label {
+        font-size: 10px;
+        top: -27px;
+    }
+
+    .main_container form .input-city input:valid~label,
+    .main_container form .input-city input:focus~label {
+        font-size: 9px;
+        top: -41.5px;
+    }
+
 }

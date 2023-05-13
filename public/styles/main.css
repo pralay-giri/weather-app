@@ -147,11 +147,18 @@ body {
 }
 
 .main_container .other_data form input[type="submit"] {
-    background-color: var(--background-color);
+    background-color: rgba(44, 158, 223, .9);
     border: 1px solid white;
     border-left: none;
     color: white;
     padding: 0 2px;
+    cursor: pointer;
+}
+
+.main_container .other_data form input[type="submit"]:hover,
+.main_container .other_data form input[type="submit"]:focus {
+    background-color: rgba(44, 158, 223, .6);
+    outline: none;
 }
 
 .main_container .other_data .other-options {
