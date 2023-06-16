@@ -16,3 +16,10 @@ for (a in clouds) {
         break;
     }
 }
+
+const main_container = document.querySelector(".main_container")
+const hambar = document.querySelector(".main_container .hambar")
+
+hambar.addEventListener('click', ()=>{
+    main_container.classList.toggle("ham_bar_active")
+})

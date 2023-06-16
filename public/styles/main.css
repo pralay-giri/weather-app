@@ -55,7 +55,7 @@ body {
 }
 
 .main_container .display .logo {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 2px;
 }
@@ -66,6 +66,7 @@ body {
     justify-content: flex-start;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 .main_container .display .background-image {
@@ -188,4 +189,78 @@ body {
     background-image: linear-gradient(var(--background-color), transparent);
     cursor: pointer;
     border-radius: 2px;
+}
+
+/* hambar */
+.main_container .fa-solid {
+    position: absolute;
+    visibility: hidden;
+    right: 15px;
+    top: 10px;
+    font-size: xx-large;
+    z-index: 10;
+    color: white;
+}
+
+.main_container .fa-solid:hover {
+    color: var(--black-overlay);
+}
+
+
+@media (max-width: 768px) {
+    .main_container .fa-solid {
+        visibility: visible;
+        z-index: 10;
+    }
+
+    .main_container {
+        display: flex;
+    }
+
+    .main_container .display {
+        flex-grow: 1;
+    }
+
+    .main_container .other_data {
+        flex-grow: 0;
+        display: none;
+    }
+
+    .main_container .display .display_data .temperature {
+        font-size: 60px;
+    }
+
+    .main_container .display .background-image {
+        width: 225px;
+    }
+
+    .ham_bar_active .other_data {
+        flex-grow: 1;
+        display: flex;
+
+    }
+
+    .ham_bar_active .display {
+        flex-grow: 0;
+        display: none;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .main_container .display .display_data .temperature {
+        font-size: 40px;
+    }
+
+    .main_container .display .display_data .location_time {
+        font-size: 12px;
+    }
+
+    .main_container .display .display_data .cloud_details p{
+        font-size: 12px;
+    }
+
+    .main_container .display .background-image {
+        width: 200px;
+    }
 }

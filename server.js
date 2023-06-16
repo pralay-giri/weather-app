@@ -5,7 +5,6 @@ const hbs = require("hbs");
 const axios = require("axios");
 const getLiveDate = require("./modules/getDate");
 const getweatherData = require("./modules/getWeatherInformation");
-const { error } = require("console");
 const app = express();
 const port = process.env.PORT || 5500;
 
@@ -27,7 +26,6 @@ app.get("/showWeather", async (req, res) => {
     let weatherData;
     try {
         weatherData = await getweatherData(city);
-
         res.render("index", {
             temperature: weatherData.main.temp,
             localtion: weatherData.name,

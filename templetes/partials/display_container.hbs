@@ -3,13 +3,15 @@
     <img src="./media/hotair.png" class="background-image">
     <div class="display_data">
         <div class="temperature">{{temperature}}&deg;</div>
-        <div class="location_time">
-            <p class="location">{{localtion}}, {{country}}</p>
-            <p class="realtime">{{realtime}}</p>
-        </div>
-        <div class="cloud_details">
-            <img src="" alt=".">
-            <p>{{cloud_status}}</p>
+        <div style="display: flex;gap: 10px;">
+            <div class="location_time">
+                <p class="location">{{localtion}}, {{country}}</p>
+                <p class="realtime">{{realtime}}</p>
+            </div>
+            <div class="cloud_details">
+                <img src="" alt=".">
+                <p>{{cloud_status}}</p>
+            </div>
         </div>
     </div>
 </div>

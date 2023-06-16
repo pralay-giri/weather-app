@@ -66,3 +66,26 @@ body {
     font-size: 16px;
     letter-spacing: 2px;
 }
+
+
+.error-container img {
+    width: 50vw;
+    margin: 10px;
+}
+
+.error-container p {
+    font-size: 3.5vw;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .error-container {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 426px) {
+    .error-container {
+        height: 40vh;
+    }
+}
