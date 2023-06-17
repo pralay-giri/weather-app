@@ -237,7 +237,21 @@ body {
     .ham_bar_active .other_data {
         flex-grow: 1;
         display: flex;
+        animation-name: fade;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in-out;
+    }
 
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        100% {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     .ham_bar_active .display {
@@ -256,7 +270,7 @@ body {
         font-size: 12px;
     }
 
-    .main_container .display .display_data .cloud_details p{
+    .main_container .display .display_data .cloud_details p {
         font-size: 12px;
     }
 
