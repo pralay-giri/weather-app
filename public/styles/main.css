@@ -215,6 +215,7 @@ body {
 
     .main_container {
         display: flex;
+        height: 80vh;
     }
 
     .main_container .display {
@@ -262,6 +263,9 @@ body {
 }
 
 @media (max-width: 375px) {
+    .main_container{
+        height: 75vh;
+    }
     .main_container .display .display_data .temperature {
         font-size: 40px;
     }
