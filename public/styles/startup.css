@@ -16,199 +16,51 @@
     --black-overlay: rgb(0 0 0 / 87%);
 }
 
-html,
-body {
-    height: 100vh
-}
-
-body {
+body{
+    height: 100vh;
     background-color: var(--gradian-color);
     background-image: linear-gradient(transparent, var(--background-color));
 }
 
-::selection {
-    background-color: var(--selection-color);
-    color: white;
-}
-
-.main_container {
-    width: 30vw;
-    height: 50vh;
-    padding: 10px;
+.main_container{
+    width: 400px;
+    height: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: red;
-    background-color: var(--gradian-color);
-    background-image: linear-gradient(var(--background-color), transparent);
-    box-shadow: 0 5px 40px black;
-}
-
-.main_container h1 {
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: white;
-    pointer-events: none;
-}
-
-.main_container .details {
-    position: absolute;
-    color: var(--black-overlay);
-    opacity: .8;
-    bottom: 20px;
-    left: 50%;
-    font-size: 15px;
-    transform: translate(-50%);
-    text-align: center;
-    pointer-events: none;
-    word-break: normal;
-}
-
-.main_container form {
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.main_container form .input-city input {
-    height: 100%;
-    width: 100%;
-    padding: 2px;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    padding: 5px;
-    border: 1px solid white;
+.logo{
+    font-size: 15px;
     color: white;
+    text-align: center;
+
 }
 
-.main_container form .input-city label {
+.main_container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.main_container form .input-city{
     position: relative;
-    top: -36px;
-    pointer-events: none;
+}
+
+.main_container form .input-city input{
+    width: 100%;
+}
+
+.main_container form .input-city label{
+    position: relative;
+}
+
+.main_container p{
     color: white;
-    padding: 0 3px;
-    margin: 2px;
-}
-
-.main_container form .input-city input:valid~label,
-.main_container form .input-city input:focus~label {
-    top: -60px;
-    background-color: #62c5eb;
-    font-size: 12px;
-    opacity: .9;
-    transition: .5s;
-}
-
-.main_container form input[type="submit"] {
-    background-color: rgba(255, 255, 255, .5);
-    border: 1px solid white;
-    border-left: none;
-    color: black;
-    padding: 0 2px;
-    width: 50%;
-    cursor: pointer;
-}
-
-.main_container form input[type="submit"]:hover,
-.main_container form input[type="submit"]:focus {
-    background-color: rgba(255, 255, 255, .7);
-    outline: none;
-}
-
-@media (width <=769px) {
-    .main_container {
-        width: 40vw;
-        height: 40vh;
-        padding: 8px;
-    }
-
-    .main_container h1 {
-        font-size: 12px;
-    }
-
-    .main_container form .input-city label {
-        font-size: 13px;
-        top: -34px;
-    }
-
-    .main_container form .input-city input:valid~label,
-    .main_container form .input-city input:focus~label {
-        font-size: 10px;
-    }
-
-    .main_container .details {
-        font-size: 12px;
-    }
-}
-
-@media (width <=481px) {
-    .main_container {
-        width: 50vw;
-        height: 30vh;
-        padding: 6px;
-    }
-
-    .main_container h1 {
-        font-size: 11px;
-    }
-
-    .main_container form .input-city label {
-        font-size: 6px;
-        top: -34px;
-    }
-
-    .main_container form .input-city input:valid~label,
-    .main_container form .input-city input:focus~label {
-        font-size: 6px;
-    }
-    .main_container .details {
-        font-size: 6px;
-    }
-
-    .main_container form input[type="submit"] {
-        font-size: 10px;
-    }
-}
-
-@media (width <=320px) {
-    .main_container {
-        width: 60vw;
-        height: 30vh;
-        padding: 6px;
-    }
-
-
-    .main_container form {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main_container form input[type="submit"] {
-        height: 30px;
-        width: 100%;
-    }
-
-    .main_container form .input-city label {
-        font-size: 10px;
-        top: -27px;
-    }
-
-    .main_container form .input-city input:valid~label,
-    .main_container form .input-city input:focus~label {
-        font-size: 9px;
-        top: -41.5px;
-    }
-    .main_container .details {
-        font-size: 7px;
-    }
-
-    .main_container form input[type="submit"] {
-        font-size: 7px;
-    }
+    text-align: center;
+    word-wrap: normal;
 }
