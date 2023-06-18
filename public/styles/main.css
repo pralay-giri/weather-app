@@ -207,7 +207,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .main_container .fa-solid {
         visibility: visible;
         z-index: 10;
@@ -215,7 +215,7 @@ body {
 
     .main_container {
         display: flex;
-        height: 80vh;
+        height: 70vh;
     }
 
     .main_container .display {
@@ -262,9 +262,15 @@ body {
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 426px) {
     .main_container{
-        height: 75vh;
+        height: 50vh;
+    }
+}
+
+@media (max-width: 376px) {
+    .main_container{
+        height: 50vh;
     }
     .main_container .display .display_data .temperature {
         font-size: 40px;
