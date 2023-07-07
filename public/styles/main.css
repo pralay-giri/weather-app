@@ -264,7 +264,8 @@ body {
 
 @media (max-width: 426px) {
     .main_container{
-        height: 50vh;
+        height: 50svh;
+        width: 100vw;
     }
 }
 
